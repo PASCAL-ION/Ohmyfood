@@ -1,7 +1,53 @@
-.header__logo {
+@import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.header__divLogo {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  padding: 20px 0;
+  box-shadow: 0px 5px 5px #000000;
+}
+.header__location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  background-color: #eaebeb;
+}
+.header__location__p {
+  margin-left: 30px;
+}
+.header__restaurantSearch {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #f7f7f6;
+}
+.header__restaurantSearch__h1 {
+  padding: 40px 45px 15px 45px;
+  font-weight: 700;
+  font-size: 26px;
+  text-align: center;
+}
+.header__restaurantSearch__p {
+  font-size: 18px;
+  text-align: center;
+  padding: 0 20px 30px 20px;
+}
+.header__restaurantSearch__btn {
+  border-radius: 50px;
+  padding: 20px;
+  color: white;
+  background: linear-gradient(#ec83dc, #a35adb);
+  border: none;
+  font-size: 16px;
+  margin-bottom: 60px;
 }
 
 /*# sourceMappingURL=style.css.map */

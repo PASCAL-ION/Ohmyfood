@@ -1,7 +1,50 @@
 @import "mixins.scss";
+@import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
 
 .header {
-    &__logo {
+    &__divLogo {
         @include flexRowCenter;
+        width: 100%;
+        padding: 20px 0;
+        box-shadow: 0px 5px 5px #000000;
+        /* FONCTIONNE PAS */
+    }
+
+    &__location {
+        @include flexRowCenter;
+        padding: 10px 0;
+        background-color: #eaebeb;
+
+        &__p {
+            margin-left: 30px;
+        }
+    }
+
+    &__restaurantSearch {
+        @include flexColumnCenter;
+        background: #f7f7f6;
+
+        &__h1 {
+            padding: 40px 45px 15px 45px;
+            font-weight: 700;
+            font-size: 26px;
+            text-align: center;
+        }
+
+        &__p {
+            font-size: 18px;
+            text-align: center;
+            padding: 0 20px 30px 20px;
+        }
+
+        &__btn {
+            @include buttonStyle;
+            margin-bottom: 60px;
+        }
     }
 }
