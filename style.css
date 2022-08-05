@@ -10,7 +10,7 @@ body {
   align-items: center;
   width: 100%;
   padding: 20px 0;
-  box-shadow: 0px 5px 5px #000000;
+  /* FONCTIONNE PAS */
 }
 .header__location {
   display: flex;
@@ -18,6 +18,7 @@ body {
   align-items: center;
   padding: 10px 0;
   background-color: #eaebeb;
+  box-shadow: inset 0 5px 5px #dbdada;
 }
 .header__location__p {
   margin-left: 30px;
@@ -44,10 +45,60 @@ body {
   border-radius: 50px;
   padding: 20px;
   color: white;
-  background: linear-gradient(#ec83dc, #a35adb);
+  background: linear-gradient(#FF79DA, #9356DC);
   border: none;
   font-size: 16px;
   margin-bottom: 60px;
+}
+.header__instructions {
+  padding: 50px 20px;
+}
+.header__instructions__h2 {
+  font-weight: 700;
+  font-size: 24px;
+}
+.header__instructions__ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  height: 220px;
+  margin-top: 25px;
+}
+.header__instructions__ul__li {
+  width: 100%;
+  text-align: start;
+  border-radius: 50px;
+  background: #f6f6f6;
+  padding: 20px 40px;
+  position: relative;
+}
+.header__instructions__ul__li span {
+  color: white;
+  font-size: 10px;
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 30%;
+  left: 0;
+  transform: translateX(-30%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #9356DC;
+}
+.header__instructions__ul__li:hover {
+  background: #f4edfe;
+}
+.header__instructions__ul__li:hover i {
+  color: #9356DC;
+}
+.header__instructions__ul__li__icons {
+  margin-right: 20px;
+  color: #7e7e7e;
 }
 
 /*# sourceMappingURL=style.css.map */
