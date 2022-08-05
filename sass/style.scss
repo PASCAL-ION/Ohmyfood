@@ -58,7 +58,7 @@ body {
         padding: 50px 20px;
 
         &__h2 {
-            font-weight: 700;
+            font-weight: 500;
             font-size: 24px;
         }
 
@@ -107,5 +107,30 @@ body {
             }
 
         }
+    }
+}
+
+.main {
+    background: #f6f6f6;
+    padding: 50px 20px;
+
+
+    &__card {
+        height: 320px;
+        background-color: white;
+        margin: 30px auto;
+        border-radius: 20px;
+
+        &__img {
+            height: 70%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+    }
+
+    &__h2 {
+        font-weight: 500;
+        font-size: 24px;
     }
 }

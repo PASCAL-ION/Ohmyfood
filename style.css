@@ -54,7 +54,7 @@ body {
   padding: 50px 20px;
 }
 .header__instructions__h2 {
-  font-weight: 700;
+  font-weight: 500;
   font-size: 24px;
 }
 .header__instructions__ul {
@@ -99,6 +99,26 @@ body {
 .header__instructions__ul__li__icons {
   margin-right: 20px;
   color: #7e7e7e;
+}
+
+.main {
+  background: #f6f6f6;
+  padding: 50px 20px;
+}
+.main__card {
+  height: 320px;
+  background-color: white;
+  margin: 30px auto;
+  border-radius: 20px;
+}
+.main__card__img {
+  height: 70%;
+  width: 100%;
+  object-fit: cover;
+}
+.main__h2 {
+  font-weight: 500;
+  font-size: 24px;
 }
 
 /*# sourceMappingURL=style.css.map */
