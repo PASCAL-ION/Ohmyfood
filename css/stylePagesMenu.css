@@ -37,6 +37,10 @@ body {
   background: #f7f6f7;
 }
 
+.main__image img {
+  aspect-ratio: 1.2/1;
+  object-fit: cover;
+}
 .main__menu {
   width: 100%;
   padding: 30px 10px 40px 10px;
@@ -156,6 +160,9 @@ body {
     font-weight: bold;
   }
 }
+.main__menu__entree {
+  /*Version de base*/
+}
 .main__menu__entree__h2 {
   font-size: 1.4rem;
   margin-top: 20px;
@@ -173,8 +180,12 @@ body {
 }
 .main__menu__entree__card {
   position: relative;
+  display: flex;
+  align-items: center;
   width: 100%;
+  max-height: 6.7rem;
   padding: 10px;
+  padding-right: 0;
   border-radius: 20px;
   background: #fffefe;
   margin-top: 10px;
@@ -185,34 +196,38 @@ body {
   /*Slide droite au hover*/
   /*Animation cartes*/
 }
+.main__menu__entree__card--blockH2etP {
+  width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
 .main__menu__entree__card .elementHover {
-  display: none;
-  margin-left: 20px;
+  background: #99E2D0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 10px;
+  transform: translateX(100%);
+}
+.main__menu__entree__card .elementHover i {
+  font-size: 0;
 }
 .main__menu__entree__card:hover {
   cursor: pointer;
 }
 .main__menu__entree__card:hover .elementHover {
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 50%;
-  background: #99E2D0;
-  height: 100%;
-  width: 6rem;
-  transform: translateY(-50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 2rem;
   animation-name: slideToLeft;
   animation-duration: 0.5s;
+  animation-fill-mode: forwards;
 }
 .main__menu__entree__card:hover .elementHover i {
+  font-size: 2rem;
   rotate: 360deg;
   animation-name: rotate360;
   animation-duration: 0.5s;
+  color: white;
 }
 @keyframes rotate360 {
   0% {
@@ -224,33 +239,17 @@ body {
 }
 @keyframes slideToLeft {
   0% {
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 50%;
-    width: 0px;
-    transform: translateX(100%);
-    transform: translateY(-50%);
+    width: 6rem;
     background: #99E2D0;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
+    height: 70px;
     font-size: 2rem;
   }
   100% {
+    width: 7rem;
     display: block;
-    position: absolute;
-    right: 0;
-    top: 50%;
-    background: #99E2D0;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 2rem;
+    transform: translateX(0%);
+    height: 70px;
+    margin-left: 20px;
   }
 }
 @keyframes apparition {
@@ -267,17 +266,22 @@ body {
   font-size: 1.6rem;
   font-weight: bold;
   line-height: 30px;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .main__menu__entree__card__ingredients {
-  font-size: 1.4rem;
-  position: relative;
+  font-size: 1.3rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-right: 5px;
 }
 .main__menu__entree__card__prix {
   font-size: 1.4rem;
-  position: absolute;
-  top: 50%;
-  left: 100%;
-  transform: translate(-100%, -50%);
+  align-self: flex-end;
+}
+.main__menu__plat {
+  /*Version de base*/
 }
 .main__menu__plat__h2 {
   font-size: 1.4rem;
@@ -296,8 +300,12 @@ body {
 }
 .main__menu__plat__card {
   position: relative;
+  display: flex;
+  align-items: center;
   width: 100%;
+  max-height: 6.7rem;
   padding: 10px;
+  padding-right: 0;
   border-radius: 20px;
   background: #fffefe;
   margin-top: 10px;
@@ -308,34 +316,38 @@ body {
   /*Slide droite au hover*/
   /*Animation cartes*/
 }
+.main__menu__plat__card--blockH2etP {
+  width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
 .main__menu__plat__card .elementHover {
-  display: none;
-  margin-left: 20px;
+  background: #99E2D0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 10px;
+  transform: translateX(100%);
+}
+.main__menu__plat__card .elementHover i {
+  font-size: 0;
 }
 .main__menu__plat__card:hover {
   cursor: pointer;
 }
 .main__menu__plat__card:hover .elementHover {
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 50%;
-  background: #99E2D0;
-  height: 100%;
-  width: 6rem;
-  transform: translateY(-50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 2rem;
   animation-name: slideToLeft;
   animation-duration: 0.5s;
+  animation-fill-mode: forwards;
 }
 .main__menu__plat__card:hover .elementHover i {
+  font-size: 2rem;
   rotate: 360deg;
   animation-name: rotate360;
   animation-duration: 0.5s;
+  color: white;
 }
 @keyframes rotate360 {
   0% {
@@ -347,33 +359,17 @@ body {
 }
 @keyframes slideToLeft {
   0% {
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 50%;
-    width: 0px;
-    transform: translateX(100%);
-    transform: translateY(-50%);
+    width: 6rem;
     background: #99E2D0;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
+    height: 70px;
     font-size: 2rem;
   }
   100% {
+    width: 7rem;
     display: block;
-    position: absolute;
-    right: 0;
-    top: 50%;
-    background: #99E2D0;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 2rem;
+    transform: translateX(0%);
+    height: 70px;
+    margin-left: 20px;
   }
 }
 @keyframes apparition {
@@ -390,17 +386,22 @@ body {
   font-size: 1.6rem;
   font-weight: bold;
   line-height: 30px;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .main__menu__plat__card__ingredients {
-  font-size: 1.4rem;
-  position: relative;
+  font-size: 1.3rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-right: 5px;
 }
 .main__menu__plat__card__prix {
   font-size: 1.4rem;
-  position: absolute;
-  top: 50%;
-  left: 100%;
-  transform: translate(-100%, -50%);
+  align-self: flex-end;
+}
+.main__menu__dessert {
+  /*Version de base*/
 }
 .main__menu__dessert__h2 {
   font-size: 1.4rem;
@@ -419,8 +420,12 @@ body {
 }
 .main__menu__dessert__card {
   position: relative;
+  display: flex;
+  align-items: center;
   width: 100%;
+  max-height: 6.7rem;
   padding: 10px;
+  padding-right: 0;
   border-radius: 20px;
   background: #fffefe;
   margin-top: 10px;
@@ -431,34 +436,38 @@ body {
   /*Slide droite au hover*/
   /*Animation cartes*/
 }
+.main__menu__dessert__card--blockH2etP {
+  width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
 .main__menu__dessert__card .elementHover {
-  display: none;
-  margin-left: 20px;
+  background: #99E2D0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 10px;
+  transform: translateX(100%);
+}
+.main__menu__dessert__card .elementHover i {
+  font-size: 0;
 }
 .main__menu__dessert__card:hover {
   cursor: pointer;
 }
 .main__menu__dessert__card:hover .elementHover {
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 50%;
-  background: #99E2D0;
-  height: 100%;
-  width: 6rem;
-  transform: translateY(-50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 2rem;
   animation-name: slideToLeft;
   animation-duration: 0.5s;
+  animation-fill-mode: forwards;
 }
 .main__menu__dessert__card:hover .elementHover i {
+  font-size: 2rem;
   rotate: 360deg;
   animation-name: rotate360;
   animation-duration: 0.5s;
+  color: white;
 }
 @keyframes rotate360 {
   0% {
@@ -470,33 +479,17 @@ body {
 }
 @keyframes slideToLeft {
   0% {
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 50%;
-    width: 0px;
-    transform: translateX(100%);
-    transform: translateY(-50%);
+    width: 6rem;
     background: #99E2D0;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
+    height: 70px;
     font-size: 2rem;
   }
   100% {
+    width: 7rem;
     display: block;
-    position: absolute;
-    right: 0;
-    top: 50%;
-    background: #99E2D0;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 2rem;
+    transform: translateX(0%);
+    height: 70px;
+    margin-left: 20px;
   }
 }
 @keyframes apparition {
@@ -513,17 +506,19 @@ body {
   font-size: 1.6rem;
   font-weight: bold;
   line-height: 30px;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .main__menu__dessert__card__ingredients {
-  font-size: 1.4rem;
-  position: relative;
+  font-size: 1.3rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-right: 5px;
 }
 .main__menu__dessert__card__prix {
   font-size: 1.4rem;
-  position: absolute;
-  top: 50%;
-  left: 100%;
-  transform: translate(-100%, -50%);
+  align-self: flex-end;
 }
 .main__menu__bouton {
   border-radius: 50px;

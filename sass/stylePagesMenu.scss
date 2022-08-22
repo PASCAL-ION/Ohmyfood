@@ -40,6 +40,13 @@ body {
 
 .main {
 
+    &__image {
+        img {
+            aspect-ratio: 1.2/1;
+            object-fit: cover;
+        }
+    }
+
     &__menu {
 
         width: 100%;

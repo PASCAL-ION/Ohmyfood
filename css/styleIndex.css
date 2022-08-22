@@ -163,7 +163,7 @@ a {
   padding-left: 15px;
   position: relative;
   width: 100%;
-  height: auto;
+  height: 96px;
 }
 .main__cardContainer__card__footer__h3 {
   font-weight: 500;
