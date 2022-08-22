@@ -1,0 +1,573 @@
+@charset "UTF-8";
+@import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+:root {
+  font-size: 10px;
+  font-family: "roboto";
+}
+
+.header {
+  display: flex;
+}
+.header .header__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+.header__bouton {
+  border: none;
+  background: none;
+  margin-left: 15px;
+}
+.header__bouton i {
+  font-size: 2rem;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+body {
+  background: #f7f6f7;
+}
+
+.main__menu {
+  width: 100%;
+  padding: 30px 10px 40px 10px;
+  background: #f7f6f7;
+  border-top-right-radius: 40px;
+  border-top-left-radius: 40px;
+  transform: translateY(-5%);
+}
+.main__menu__h1 {
+  font-size: 2.4rem;
+  font-family: "Shrikhand", cursive;
+  position: relative;
+  width: calc(100% - 20px);
+  margin: 0 auto;
+}
+.main__menu__h1__heart {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(-100%, -50%);
+  /*Animation du coeur*/
+}
+.main__menu__h1__heart i:hover {
+  cursor: pointer;
+  animation-name: fillHeart;
+  animation-duration: 0.4s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+@keyframes fillHeart {
+  0% {
+    background: 20% linear-gradient(white 100%, #FF79DA);
+    background-position: 0% 80%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+  }
+  10% {
+    background: 20% linear-gradient(white 90%, #FF79DA);
+    background-position: 0% 40%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+  }
+  20% {
+    background: 20% linear-gradient(white 80%, #FF79DA);
+    background-position: 0% 40%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+  }
+  30% {
+    background: 20% linear-gradient(white 70%, #FF79DA);
+    background-position: 0% 40%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+  }
+  40% {
+    background: 20% linear-gradient(white 60%, #FF79DA);
+    background-position: 0% 40%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+  }
+  50% {
+    background: 20% linear-gradient(white 50%, #FF79DA);
+    background-position: 0% 40%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+  }
+  60% {
+    background: 20% linear-gradient(white 40%, #FF79DA);
+    background-position: 0% 40%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+  }
+  70% {
+    background: 20% linear-gradient(white 30%, #FF79DA);
+    background-position: 0% 40%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+  }
+  80% {
+    background: 20% linear-gradient(white 20%, #FF79DA);
+    background-position: 0% 40%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+  }
+  90% {
+    background: 20% linear-gradient(white 10%, #FF79DA);
+    background-position: 0% 40%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+  }
+  100% {
+    background: 20% linear-gradient(#9356DC, #FF79DA);
+    background-position: 0% 0%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+  }
+}
+.main__menu__entree__h2 {
+  font-size: 1.4rem;
+  margin-top: 20px;
+  position: relative;
+  margin-bottom: 20px;
+}
+.main__menu__entree__h2::after {
+  content: "";
+  position: absolute;
+  width: 35px;
+  height: 3px;
+  background: #99E2D0;
+  top: 120%;
+  left: 0;
+}
+.main__menu__entree__card {
+  position: relative;
+  width: 100%;
+  padding: 10px;
+  border-radius: 20px;
+  background: #fffefe;
+  margin-top: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.151);
+  animation-name: apparition;
+  animation-duration: 3s;
+  overflow: hidden;
+  /*Slide droite au hover*/
+  /*Animation cartes*/
+}
+.main__menu__entree__card .elementHover {
+  display: none;
+  margin-left: 20px;
+}
+.main__menu__entree__card:hover {
+  cursor: pointer;
+}
+.main__menu__entree__card:hover .elementHover {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  background: #99E2D0;
+  height: 100%;
+  width: 6rem;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 2rem;
+  animation-name: slideToLeft;
+  animation-duration: 0.5s;
+}
+.main__menu__entree__card:hover .elementHover i {
+  rotate: 360deg;
+  animation-name: rotate360;
+  animation-duration: 0.5s;
+}
+@keyframes rotate360 {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
+}
+@keyframes slideToLeft {
+  0% {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 0px;
+    transform: translateX(100%);
+    transform: translateY(-50%);
+    background: #99E2D0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2rem;
+  }
+  100% {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    background: #99E2D0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2rem;
+  }
+}
+@keyframes apparition {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+.main__menu__entree__card__nomPlat {
+  font-size: 1.6rem;
+  font-weight: bold;
+  line-height: 30px;
+}
+.main__menu__entree__card__ingredients {
+  font-size: 1.4rem;
+  position: relative;
+}
+.main__menu__entree__card__prix {
+  font-size: 1.4rem;
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(-100%, -50%);
+}
+.main__menu__plat__h2 {
+  font-size: 1.4rem;
+  margin-top: 20px;
+  position: relative;
+  margin-bottom: 20px;
+}
+.main__menu__plat__h2::after {
+  content: "";
+  position: absolute;
+  width: 35px;
+  height: 3px;
+  background: #99E2D0;
+  top: 120%;
+  left: 0;
+}
+.main__menu__plat__card {
+  position: relative;
+  width: 100%;
+  padding: 10px;
+  border-radius: 20px;
+  background: #fffefe;
+  margin-top: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.151);
+  animation-name: apparition;
+  animation-duration: 3s;
+  overflow: hidden;
+  /*Slide droite au hover*/
+  /*Animation cartes*/
+}
+.main__menu__plat__card .elementHover {
+  display: none;
+  margin-left: 20px;
+}
+.main__menu__plat__card:hover {
+  cursor: pointer;
+}
+.main__menu__plat__card:hover .elementHover {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  background: #99E2D0;
+  height: 100%;
+  width: 6rem;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 2rem;
+  animation-name: slideToLeft;
+  animation-duration: 0.5s;
+}
+.main__menu__plat__card:hover .elementHover i {
+  rotate: 360deg;
+  animation-name: rotate360;
+  animation-duration: 0.5s;
+}
+@keyframes rotate360 {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
+}
+@keyframes slideToLeft {
+  0% {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 0px;
+    transform: translateX(100%);
+    transform: translateY(-50%);
+    background: #99E2D0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2rem;
+  }
+  100% {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    background: #99E2D0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2rem;
+  }
+}
+@keyframes apparition {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+.main__menu__plat__card__nomPlat {
+  font-size: 1.6rem;
+  font-weight: bold;
+  line-height: 30px;
+}
+.main__menu__plat__card__ingredients {
+  font-size: 1.4rem;
+  position: relative;
+}
+.main__menu__plat__card__prix {
+  font-size: 1.4rem;
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(-100%, -50%);
+}
+.main__menu__dessert__h2 {
+  font-size: 1.4rem;
+  margin-top: 20px;
+  position: relative;
+  margin-bottom: 20px;
+}
+.main__menu__dessert__h2::after {
+  content: "";
+  position: absolute;
+  width: 35px;
+  height: 3px;
+  background: #99E2D0;
+  top: 120%;
+  left: 0;
+}
+.main__menu__dessert__card {
+  position: relative;
+  width: 100%;
+  padding: 10px;
+  border-radius: 20px;
+  background: #fffefe;
+  margin-top: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.151);
+  animation-name: apparition;
+  animation-duration: 3s;
+  overflow: hidden;
+  /*Slide droite au hover*/
+  /*Animation cartes*/
+}
+.main__menu__dessert__card .elementHover {
+  display: none;
+  margin-left: 20px;
+}
+.main__menu__dessert__card:hover {
+  cursor: pointer;
+}
+.main__menu__dessert__card:hover .elementHover {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  background: #99E2D0;
+  height: 100%;
+  width: 6rem;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 2rem;
+  animation-name: slideToLeft;
+  animation-duration: 0.5s;
+}
+.main__menu__dessert__card:hover .elementHover i {
+  rotate: 360deg;
+  animation-name: rotate360;
+  animation-duration: 0.5s;
+}
+@keyframes rotate360 {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
+}
+@keyframes slideToLeft {
+  0% {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 0px;
+    transform: translateX(100%);
+    transform: translateY(-50%);
+    background: #99E2D0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2rem;
+  }
+  100% {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    background: #99E2D0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2rem;
+  }
+}
+@keyframes apparition {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+.main__menu__dessert__card__nomPlat {
+  font-size: 1.6rem;
+  font-weight: bold;
+  line-height: 30px;
+}
+.main__menu__dessert__card__ingredients {
+  font-size: 1.4rem;
+  position: relative;
+}
+.main__menu__dessert__card__prix {
+  font-size: 1.4rem;
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(-100%, -50%);
+}
+.main__menu__bouton {
+  border-radius: 50px;
+  padding: 20px;
+  color: white;
+  background: linear-gradient(#FF79DA, #9356DC);
+  border: none;
+  font-size: 16px;
+  margin-top: 50px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  padding: 15px 40px;
+}
+
+.footer {
+  background: #343534;
+  padding: 20px;
+}
+.footer__logo {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.6rem;
+  color: rgba(254, 255, 254, 0.9176470588);
+}
+.footer__ul {
+  margin-top: 15px;
+  margin-bottom: 20px;
+  /*Selection des li ainsi que du li contact qui est dans un a*/
+  /*Selection de l'icône du 2eme li*/
+}
+.footer__ul__li, .footer__ul__a {
+  font-size: 1.4rem;
+  color: rgba(254, 255, 254, 0.9176470588);
+  line-height: 2.5rem;
+}
+.footer__ul__li:hover, .footer__ul__a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.footer__ul__li__icones, .footer__ul__a__icones {
+  font-size: 1.2rem;
+  margin-right: 10px;
+}
+.footer__ul__li:nth-child(2n) span i {
+  width: 1.05rem;
+}
+
+/*# sourceMappingURL=stylePagesMenu.css.map */

@@ -1,3 +1,7 @@
+$primary: #9356DC;
+$secondary: #FF79DA;
+$tertiary: #99E2D0;
+
 @mixin flexRowCenter {
     display: flex;
     justify-content: center;
@@ -69,6 +73,147 @@
             width: 50%;
             margin: 0 auto;
             padding: 20px 0;
+        }
+    }
+}
+
+@mixin styleCarteMenu {
+    &__h2 {
+        font-size: 1.4rem;
+        margin-top: 20px;
+        position: relative;
+        margin-bottom: 20px;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 35px;
+            height: 3px;
+            background: $tertiary;
+            top: 120%;
+            left: 0;
+        }
+    }
+
+    &__card {
+        position: relative;
+        width: 100%;
+        padding: 10px;
+        border-radius: 20px;
+        background: #fffefe;
+        margin-top: 10px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.151);
+        animation-name: apparition;
+        animation-duration: 3s;
+        overflow: hidden;
+
+        /*Slide droite au hover*/
+        .elementHover {
+            display: none;
+            margin-left: 20px;
+        }
+
+        &:hover {
+            cursor: pointer;
+
+            .elementHover {
+                display: block;
+                position: absolute;
+                right: 0;
+                top: 50%;
+                background: $tertiary;
+                height: 100%;
+                width: 6rem;
+                transform: translateY(-50%);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                font-size: 2rem;
+                animation-name: slideToLeft;
+                animation-duration: 0.5s;
+
+                i {
+                    rotate: 360deg;
+                    animation-name: rotate360;
+                    animation-duration: 0.5s;
+                }
+            }
+
+            @keyframes rotate360 {
+                0% {
+                    rotate: 0deg;
+                }
+
+                100% {
+                    rotate: 360deg;
+                }
+            }
+
+            @keyframes slideToLeft {
+                0% {
+                    display: block;
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    width: 0px;
+                    transform: translateX(100%);
+                    transform: translateY(-50%);
+                    background: $tertiary;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: white;
+                    font-size: 2rem;
+                }
+
+                100% {
+                    display: block;
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    background: $tertiary;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: white;
+                    font-size: 2rem;
+                }
+            }
+        }
+
+        /*Animation cartes*/
+        @keyframes apparition {
+            0% {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0px);
+            }
+        }
+
+        &__nomPlat {
+            font-size: 1.6rem;
+            font-weight: bold;
+            line-height: 30px;
+        }
+
+        &__ingredients {
+            font-size: 1.4rem;
+            position: relative;
+        }
+
+        &__prix {
+            font-size: 1.4rem;
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            transform: translate(-100%, -50%);
         }
     }
 }
