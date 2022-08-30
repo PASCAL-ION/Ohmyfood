@@ -1,0 +1,40 @@
+@mixin querryTablette {
+    $max-width: 1440px;
+
+
+    @media screen and (max-width: 768px) and (min-width: 321px) {
+
+        :root {
+            font-size: 14px;
+        }
+
+        header {
+            max-width: $max-width;
+        }
+
+        .main {
+            max-width: $max-width;
+
+            &__cardContainer {
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                flex-wrap: wrap;
+                min-width: 100%;
+                height: auto;
+
+                a {
+                    min-width: 250px;
+                    width: 45%;
+                }
+            }
+        }
+
+        .footer {
+            max-width: $max-width;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}

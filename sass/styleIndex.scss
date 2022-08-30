@@ -2,7 +2,13 @@
 @import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import "loader.scss";
+@import "QueriesIndex/queriesTablette.scss";
+@import "QueriesIndex/queriesDesktop.scss";
 
+
+@include querryTablette;
+@include querryDesktop;
 
 $primary: #9356DC;
 $secondary: #FF79DA;
@@ -24,6 +30,10 @@ a {
     text-decoration: none;
     color: black;
 }
+
+/*Loader*/
+@include loader;
+
 
 .header {
     @include header;
@@ -80,7 +90,7 @@ a {
         &__ul {
             @include flexColumnCenter;
             justify-content: space-between;
-            height: 220px;
+            height: 22rem;
             margin-top: 25px;
 
             &__li {
@@ -146,7 +156,7 @@ a {
             border-radius: 20px;
             margin-bottom: 20px;
             box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.075);
-            padding-bottom: 15px;
+            padding-bottom: 1rem;
 
             &__stickersNouveau {
                 position: absolute;

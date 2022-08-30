@@ -1,0 +1,88 @@
+@mixin querryDesktop {
+    $max-width: 1440px;
+
+    @media screen and (min-width: 769px) {
+
+        :root {
+            font-size: 14px;
+        }
+
+
+        .header {
+            max-width: $max-width;
+            margin: 0 auto;
+            display: grid;
+            grid-template-rows: 0.25fr repeat(2, 0.5fr);
+            grid-template-columns: 1fr 1fr;
+
+            &__logo {
+                width: 100%;
+                grid-area: 1 / 1 / 1 / 3;
+            }
+
+            &__location {
+                grid-area: 2 / 2 / 2 /3;
+                box-shadow: none !important;
+            }
+
+            &__restaurantSearch {
+                grid-column: 2;
+                background: #eaebebaf !important;
+            }
+
+            &__instructions {
+                grid-area: 2 / 1 / 4 / 2;
+                background: #f7f7f6;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                &__ul {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    &__li {
+                        background: white !important;
+                        margin-bottom: 1rem;
+                    }
+                }
+            }
+        }
+
+        .main {
+            max-width: $max-width;
+            background: white;
+            margin: 0 auto;
+
+            &__cardContainer {
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                flex-wrap: wrap;
+                min-width: 100%;
+                height: auto;
+
+                a {
+                    height: 400px;
+                    width: 45%;
+                    margin-bottom: 30px;
+
+                    .main__cardContainer__card {
+                        height: 100%;
+                    }
+                }
+
+            }
+        }
+
+        .footer {
+            max-width: $max-width;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}

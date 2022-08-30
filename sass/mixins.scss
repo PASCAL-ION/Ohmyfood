@@ -2,6 +2,17 @@ $primary: #9356DC;
 $secondary: #FF79DA;
 $tertiary: #99E2D0;
 
+@mixin header {
+    .header {
+        &__logo {
+            @include flexRowCenter;
+            width: 50%;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+    }
+}
+
 @mixin flexRowCenter {
     display: flex;
     justify-content: center;
@@ -21,7 +32,133 @@ $tertiary: #99E2D0;
     color: white;
     background: linear-gradient(#FF79DA, #9356DC);
     border: none;
-    font-size: 16px;
+    font-size: 1.6rem;
+    box-shadow: 5px 7px 10px rgba(0, 0, 0, 0.247);
+
+    &:hover {
+        box-shadow: 5px 7px 10px rgba(0, 0, 0, 0.527);
+        cursor: pointer;
+        background: linear-gradient(#ff9ae2, #9c6ada);
+    }
+}
+
+@mixin styleCarteMenu {
+    &__h2 {
+        font-size: 1.4rem;
+        margin-top: 20px;
+        position: relative;
+        margin-bottom: 20px;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 35px;
+            height: 3px;
+            background: $tertiary;
+            top: 120%;
+            left: 0;
+        }
+    }
+
+    &__card {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        max-height: 6.6rem;
+        padding: 10px;
+        padding-right: 0;
+        border-radius: 20px;
+        background: #fffefe;
+        margin-top: 10px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.151);
+        overflow: hidden;
+
+
+        &--blockH2etP {
+            width: 100%;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+
+        }
+
+        /*Slide droite au hover*/
+        .elementHover {
+            background: $tertiary;
+            @include flexColumnCenter;
+            width: 10px;
+            transform: translateX(100%);
+
+            i {
+                font-size: 0;
+            }
+        }
+
+        &:hover {
+            cursor: pointer;
+
+            .elementHover {
+                animation-name: slideToLeft;
+                animation-duration: 0.5s;
+                animation-fill-mode: forwards;
+
+                i {
+                    font-size: 2rem;
+                    transform: rotate(360deg);
+                    animation-name: rotate360;
+                    animation-duration: 0.5s;
+                    color: white;
+                }
+            }
+
+            @keyframes rotate360 {
+                0% {
+                    transform: rotate(0deg);
+                }
+
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+
+            @keyframes slideToLeft {
+                0% {
+                    width: 0rem;
+                    background: $tertiary;
+                    height: 70px;
+                    font-size: 2rem;
+                }
+
+                100% {
+                    width: 7rem;
+                    transform: translateX(0%);
+                    height: 70px;
+                }
+            }
+        }
+
+        &__nomPlat {
+            font-size: 1.6rem;
+            font-weight: bold;
+            line-height: 30px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+
+        &__ingredients {
+            font-size: 1.2rem;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            margin-right: 5px;
+        }
+
+        &__prix {
+            font-size: 1.4rem;
+            align-self: flex-end;
+            margin-right: 10px;
+        }
+    }
 }
 
 @mixin footer {
@@ -62,154 +199,6 @@ $tertiary: #99E2D0;
             &__li:nth-child(2n) span i {
                 width: 1.05rem;
             }
-        }
-    }
-}
-
-@mixin header {
-    .header {
-        &__logo {
-            @include flexRowCenter;
-            width: 50%;
-            margin: 0 auto;
-            padding: 20px 0;
-        }
-    }
-}
-
-@mixin styleCarteMenu {
-    &__h2 {
-        font-size: 1.4rem;
-        margin-top: 20px;
-        position: relative;
-        margin-bottom: 20px;
-
-        &::after {
-            content: "";
-            position: absolute;
-            width: 35px;
-            height: 3px;
-            background: $tertiary;
-            top: 120%;
-            left: 0;
-        }
-    }
-
-    /*Version de base*/
-    &__card {
-        position: relative;
-        display: flex;
-        align-items: center;
-        width: 100%;
-        max-height: 6.7rem;
-        padding: 10px;
-        padding-right: 0;
-        border-radius: 20px;
-        background: #fffefe;
-        margin-top: 10px;
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.151);
-        animation-name: apparition;
-        animation-duration: 3s;
-        overflow: hidden;
-
-
-        &--blockH2etP {
-            width: 100%;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            overflow: hidden;
-
-        }
-
-        /*Slide droite au hover*/
-        .elementHover {
-            background: $tertiary;
-            @include flexColumnCenter;
-            width: 10px;
-            transform: translateX(100%);
-
-            i {
-                font-size: 0;
-            }
-        }
-
-        &:hover {
-            cursor: pointer;
-
-            .elementHover {
-                animation-name: slideToLeft;
-                animation-duration: 0.5s;
-                animation-fill-mode: forwards;
-
-                i {
-                    font-size: 2rem;
-                    rotate: 360deg;
-                    animation-name: rotate360;
-                    animation-duration: 0.5s;
-                    color: white;
-                }
-            }
-
-            @keyframes rotate360 {
-                0% {
-                    rotate: 0deg;
-                }
-
-                100% {
-                    rotate: 360deg;
-                }
-            }
-
-            @keyframes slideToLeft {
-                0% {
-                    width: 6rem;
-                    background: $tertiary;
-                    height: 70px;
-                    font-size: 2rem;
-                }
-
-                100% {
-                    width: 7rem;
-                    display: block;
-                    transform: translateX(0%);
-                    height: 70px;
-                    margin-left: 20px;
-                }
-            }
-        }
-
-        /*Animation cartes*/
-        @keyframes apparition {
-            0% {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-
-            100% {
-                opacity: 1;
-                transform: translateY(0px);
-            }
-        }
-
-        &__nomPlat {
-            font-size: 1.6rem;
-            font-weight: bold;
-            line-height: 30px;
-            text-overflow: ellipsis;
-            overflow: hidden;
-        }
-
-        &__ingredients {
-            font-size: 1.3rem;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            overflow: hidden;
-            margin-right: 5px;
-        }
-
-        &__prix {
-            font-size: 1.4rem;
-            align-self: flex-end;
         }
     }
 }
