@@ -20,12 +20,11 @@ $tertiary: #99E2D0;
 
 .header {
     display: flex;
+    align-items: center;
     @include header;
 
 
     &__bouton {
-        border: none;
-        background: none;
         margin-left: 15px;
 
         i {
@@ -85,8 +84,7 @@ body {
                 /*Animation du coeur*/
                 @keyframes fillHeart {
                     0% {
-                        background: 20% linear-gradient(white 100%, $secondary);
-                        background-position: 0% 80%;
+                        background: linear-gradient(white 100%, $secondary);
                         -webkit-background-clip: text;
                         -moz-background-clip: text;
                         -webkit-text-fill-color: transparent;
@@ -94,8 +92,7 @@ body {
                     }
 
                     10% {
-                        background: 20% linear-gradient(white 90%, $secondary);
-                        background-position: 0% 40%;
+                        background: linear-gradient(white 90%, $secondary);
                         -webkit-background-clip: text;
                         -moz-background-clip: text;
                         -webkit-text-fill-color: transparent;
@@ -103,8 +100,7 @@ body {
                     }
 
                     20% {
-                        background: 20% linear-gradient(white 80%, $secondary);
-                        background-position: 0% 40%;
+                        background: linear-gradient(white 80%, $secondary);
                         -webkit-background-clip: text;
                         -moz-background-clip: text;
                         -webkit-text-fill-color: transparent;
@@ -112,8 +108,7 @@ body {
                     }
 
                     30% {
-                        background: 20% linear-gradient(white 70%, $secondary);
-                        background-position: 0% 40%;
+                        background: linear-gradient(white 70%, $secondary);
                         -webkit-background-clip: text;
                         -moz-background-clip: text;
                         -webkit-text-fill-color: transparent;
@@ -121,8 +116,7 @@ body {
                     }
 
                     40% {
-                        background: 20% linear-gradient(white 60%, $secondary);
-                        background-position: 0% 40%;
+                        background: linear-gradient(white 60%, $secondary);
                         -webkit-background-clip: text;
                         -moz-background-clip: text;
                         -webkit-text-fill-color: transparent;
@@ -130,8 +124,7 @@ body {
                     }
 
                     50% {
-                        background: 20% linear-gradient(white 50%, $secondary);
-                        background-position: 0% 40%;
+                        background: linear-gradient(white 50%, $secondary);
                         -webkit-background-clip: text;
                         -moz-background-clip: text;
                         -webkit-text-fill-color: transparent;
@@ -139,8 +132,7 @@ body {
                     }
 
                     60% {
-                        background: 20% linear-gradient(white 40%, $secondary);
-                        background-position: 0% 40%;
+                        background: linear-gradient(white 40%, $secondary);
                         -webkit-background-clip: text;
                         -moz-background-clip: text;
                         -webkit-text-fill-color: transparent;
@@ -148,8 +140,7 @@ body {
                     }
 
                     70% {
-                        background: 20% linear-gradient(white 30%, $secondary);
-                        background-position: 0% 40%;
+                        background: linear-gradient(white 30%, $secondary);
                         -webkit-background-clip: text;
                         -moz-background-clip: text;
                         -webkit-text-fill-color: transparent;
@@ -157,8 +148,7 @@ body {
                     }
 
                     80% {
-                        background: 20% linear-gradient(white 20%, $secondary);
-                        background-position: 0% 40%;
+                        background: linear-gradient(white 20%, $secondary);
                         -webkit-background-clip: text;
                         -moz-background-clip: text;
                         -webkit-text-fill-color: transparent;
@@ -166,8 +156,7 @@ body {
                     }
 
                     90% {
-                        background: 20% linear-gradient(white 10%, $secondary);
-                        background-position: 0% 40%;
+                        background: linear-gradient(white 10%, $secondary);
                         -webkit-background-clip: text;
                         -moz-background-clip: text;
                         -webkit-text-fill-color: transparent;
@@ -175,8 +164,7 @@ body {
                     }
 
                     100% {
-                        background: 20% linear-gradient($primary, $secondary);
-                        background-position: 0% 0%;
+                        background: linear-gradient($primary, $secondary);
                         -webkit-background-clip: text;
                         -moz-background-clip: text;
                         -webkit-text-fill-color: transparent;

@@ -30,45 +30,28 @@
     width: 100%;
     height: 50vh;
   }
-  .main__menu {
-    display: grid;
-    align-content: center;
-    column-gap: 80px;
-    grid-template-rows: 0.5fr repeat(2, 1fr) 0.5fr;
-    grid-template-columns: repeat(3, 1fr);
-  }
-  .main__menu__h1 {
-    grid-area: 1/1/1/4;
-    align-self: flex-start;
+  .main .menu-cardContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   .main__menu__entree {
-    grid-area: 2/2/4/3;
-    margin: 0 auto;
+    width: 30%;
   }
   .main__menu__entree__card {
-    /* max-width: 30rem; */
-    width: 40rem !important;
+    width: 100% !important;
   }
   .main__menu__plat {
-    grid-area: 3/1/5/2;
-    margin: 0 auto;
+    width: 30%;
   }
   .main__menu__plat__card {
-    width: 40rem !important;
+    width: 100% !important;
   }
   .main__menu__dessert {
-    grid-area: 3/3/5/3;
-    margin: 0 auto;
+    width: 30%;
   }
   .main__menu__dessert__card {
-    width: 40rem !important;
-  }
-  .main__menu__bouton {
-    width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    grid-area: 4/2/5/3;
+    width: 100% !important;
   }
   .footer {
     max-width: 1440px;
@@ -94,6 +77,7 @@
 
 .header {
   display: flex;
+  align-items: center;
 }
 .header .header__logo {
   display: flex;
@@ -104,8 +88,6 @@
   padding: 20px 0;
 }
 .header__bouton {
-  border: none;
-  background: none;
   margin-left: 15px;
 }
 .header__bouton i {
@@ -157,88 +139,77 @@ body {
 }
 @keyframes fillHeart {
   0% {
-    background: 20% linear-gradient(white 100%, #FF79DA);
-    background-position: 0% 80%;
+    background: linear-gradient(white 100%, #FF79DA);
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: bold;
   }
   10% {
-    background: 20% linear-gradient(white 90%, #FF79DA);
-    background-position: 0% 40%;
+    background: linear-gradient(white 90%, #FF79DA);
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: bold;
   }
   20% {
-    background: 20% linear-gradient(white 80%, #FF79DA);
-    background-position: 0% 40%;
+    background: linear-gradient(white 80%, #FF79DA);
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: bold;
   }
   30% {
-    background: 20% linear-gradient(white 70%, #FF79DA);
-    background-position: 0% 40%;
+    background: linear-gradient(white 70%, #FF79DA);
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: bold;
   }
   40% {
-    background: 20% linear-gradient(white 60%, #FF79DA);
-    background-position: 0% 40%;
+    background: linear-gradient(white 60%, #FF79DA);
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: bold;
   }
   50% {
-    background: 20% linear-gradient(white 50%, #FF79DA);
-    background-position: 0% 40%;
+    background: linear-gradient(white 50%, #FF79DA);
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: bold;
   }
   60% {
-    background: 20% linear-gradient(white 40%, #FF79DA);
-    background-position: 0% 40%;
+    background: linear-gradient(white 40%, #FF79DA);
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: bold;
   }
   70% {
-    background: 20% linear-gradient(white 30%, #FF79DA);
-    background-position: 0% 40%;
+    background: linear-gradient(white 30%, #FF79DA);
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: bold;
   }
   80% {
-    background: 20% linear-gradient(white 20%, #FF79DA);
-    background-position: 0% 40%;
+    background: linear-gradient(white 20%, #FF79DA);
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: bold;
   }
   90% {
-    background: 20% linear-gradient(white 10%, #FF79DA);
-    background-position: 0% 40%;
+    background: linear-gradient(white 10%, #FF79DA);
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: bold;
   }
   100% {
-    background: 20% linear-gradient(#9356DC, #FF79DA);
-    background-position: 0% 0%;
+    background: linear-gradient(#9356DC, #FF79DA);
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -289,8 +260,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 10px;
-  transform: translateX(100%);
 }
 .main__menu__entree__card .elementHover i {
   font-size: 0;
@@ -321,13 +290,12 @@ body {
 @keyframes slideToLeft {
   0% {
     width: 0rem;
-    background: #99E2D0;
     height: 70px;
+    background: #99E2D0;
     font-size: 2rem;
   }
   100% {
     width: 7rem;
-    transform: translateX(0%);
     height: 70px;
   }
 }
@@ -403,8 +371,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 10px;
-  transform: translateX(100%);
 }
 .main__menu__plat__card .elementHover i {
   font-size: 0;
@@ -435,13 +401,12 @@ body {
 @keyframes slideToLeft {
   0% {
     width: 0rem;
-    background: #99E2D0;
     height: 70px;
+    background: #99E2D0;
     font-size: 2rem;
   }
   100% {
     width: 7rem;
-    transform: translateX(0%);
     height: 70px;
   }
 }
@@ -517,8 +482,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 10px;
-  transform: translateX(100%);
 }
 .main__menu__dessert__card .elementHover i {
   font-size: 0;
@@ -549,13 +512,12 @@ body {
 @keyframes slideToLeft {
   0% {
     width: 0rem;
-    background: #99E2D0;
     height: 70px;
+    background: #99E2D0;
     font-size: 2rem;
   }
   100% {
     width: 7rem;
-    transform: translateX(0%);
     height: 70px;
   }
 }

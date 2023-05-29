@@ -86,8 +86,6 @@ $tertiary: #99E2D0;
         .elementHover {
             background: $tertiary;
             @include flexColumnCenter;
-            width: 10px;
-            transform: translateX(100%);
 
             i {
                 font-size: 0;
@@ -124,14 +122,13 @@ $tertiary: #99E2D0;
             @keyframes slideToLeft {
                 0% {
                     width: 0rem;
-                    background: $tertiary;
                     height: 70px;
+                    background: $tertiary;
                     font-size: 2rem;
                 }
 
                 100% {
                     width: 7rem;
-                    transform: translateX(0%);
                     height: 70px;
                 }
             }

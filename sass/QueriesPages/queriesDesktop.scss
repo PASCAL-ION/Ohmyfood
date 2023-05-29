@@ -22,55 +22,37 @@
                 }
             }
 
+            .menu-cardContainer {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
             &__menu {
-                display: grid;
-                align-content: center;
-                column-gap: 80px;
-                grid-template-rows: 0.5fr repeat(2, 1fr) 0.5fr;
-                grid-template-columns: repeat(3, 1fr);
-
-
-
-                &__h1 {
-                    grid-area: 1 / 1 / 1 / 4;
-                    align-self: flex-start;
-                }
-
                 &__entree {
-                    grid-area: 2 / 2 / 4 / 3;
-                    margin: 0 auto;
+                    width: 30%;
 
                     &__card {
-                        /* max-width: 30rem; */
-                        width: 40rem !important;
+                        width: 100% !important;
                     }
                 }
 
                 &__plat {
-                    grid-area: 3 / 1 / 5 / 2;
-                    margin: 0 auto;
+                    width: 30%;
 
                     &__card {
-                        width: 40rem !important;
+                        width: 100% !important;
                     }
                 }
 
                 &__dessert {
-                    grid-area: 3 / 3 / 5 / 3;
-                    margin: 0 auto;
+                    width: 30%;
 
                     &__card {
-                        width: 40rem !important;
+                        width: 100% !important;
                     }
                 }
 
-                &__bouton {
-                    width: 50%;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    grid-area: 4 / 2 / 5 / 3;
-                }
             }
         }
 
