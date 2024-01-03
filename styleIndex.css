@@ -121,7 +121,7 @@ a {
 .loader {
   position: fixed;
   inset: 0;
-  background: #797979;
+  background: #000000;
   height: 100vh;
   z-index: 1;
   display: flex;
